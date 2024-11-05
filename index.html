@@ -37,6 +37,29 @@
       .condition-content {
         padding: 80px 40px;
       }
+      .data-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin: auto;
+      }
+      .data-subtitle {
+        color: #807f83;
+        margin: auto;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .icon-div {
+        height: 48px;
+        width: 48px;
+        background-color: #e9e9e9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+      }
+      .icon-div img {
+        width: 24px;
+      }
       /* Media query for screens below 767px */
       @media (max-width: 767px) {
         .form-content {
@@ -48,6 +71,16 @@
         }
         .title {
           font-size: 24px; /* Adjust title size */
+        }
+        .data-title {
+          font-size: 16px;
+        }
+        .icon-div {
+          height: 32px;
+          width: 32px;
+        }
+        .icon-div img {
+          width: 20px;
         }
       }
     </style>
@@ -88,93 +121,30 @@
             </div>
             <div style="display: flex; gap: 24px; flex-direction: column">
               <div style="display: flex; flex-direction: row; gap: 16px">
-                <div
-                  style="
-                    height: 48px;
-                    width: 48px;
-                    background-color: #e9e9e9;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 8px;
-                  "
-                >
+                <div class="icon-div">
                   <img src="assets/Calendar.png" />
                 </div>
                 <div>
-                  <h6 style="font-size: 20px; font-weight: 600; margin: auto">
-                    Issued date
-                  </h6>
-                  <p
-                    style="
-                      color: #807f83;
-                      margin: auto;
-                      font-size: 16px;
-                      font-weight: 500;
-                    "
-                  >
-                    31/11/2024
-                  </p>
+                  <h6 class="data-title">Issued date</h6>
+                  <p class="data-subtitle">31/11/2023</p>
                 </div>
               </div>
               <div style="display: flex; flex-direction: row; gap: 16px">
-                <div
-                  style="
-                    height: 48px;
-                    width: 48px;
-                    background-color: #e9e9e9;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 8px;
-                  "
-                >
-                  <img src="assets/Calendar.png" />
+                <div class="icon-div">
+                  <img src="assets/expiredDate.png" />
                 </div>
                 <div>
-                  <h6 style="font-size: 20px; font-weight: 600; margin: auto">
-                    Issued date
-                  </h6>
-                  <p
-                    style="
-                      color: #807f83;
-                      margin: auto;
-                      font-size: 16px;
-                      font-weight: 500;
-                    "
-                  >
-                    31/11/2024
-                  </p>
+                  <h6 class="data-title">Expired date</h6>
+                  <p class="data-subtitle">31/11/2024</p>
                 </div>
               </div>
               <div style="display: flex; flex-direction: row; gap: 16px">
-                <div
-                  style="
-                    height: 48px;
-                    width: 48px;
-                    background-color: #e9e9e9;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 8px;
-                  "
-                >
-                  <img src="assets/Calendar.png" />
+                <div class="icon-div">
+                  <img src="assets/amount.png" />
                 </div>
                 <div>
-                  <h6 style="font-size: 20px; font-weight: 600; margin: auto">
-                    Issued date
-                  </h6>
-                  <p
-                    style="
-                      color: #807f83;
-                      margin: auto;
-                      font-size: 16px;
-                      font-weight: 500;
-                    "
-                  >
-                    31/11/2024
-                  </p>
+                  <h6 class="data-title">Total amount</h6>
+                  <p class="data-subtitle">BDT 5000</p>
                 </div>
               </div>
             </div>
