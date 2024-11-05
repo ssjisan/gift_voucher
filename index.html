@@ -20,6 +20,17 @@
         padding: 0;
         overflow-x: hidden; /* Prevent horizontal scrolling */
       }
+      .btn-primary {
+        background-color: #ff5100; /* Custom background color */
+        font-size: 16px; /* Custom font size */
+        font-weight: 600; /* Custom font weight */
+        border-color: #ff5100; /* Match border color */
+      }
+
+      .btn-primary:hover {
+        background-color: #e04600; /* Slightly darker color for hover effect */
+        border-color: #e04600; /* Match hover border color */
+      }
       .form-side {
         padding: 40px;
         height: 100vh;
@@ -71,10 +82,35 @@
       .icon-div img {
         width: 24px;
       }
+      .ordered-list {
+        color: #807f83;
+        font-size: 20px;
+        line-height: calc(20px + 16px);
+      }
+      .terms-title {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      @media (max-width: 1116px) {
+        .title {
+          font-size: 28px; /* Adjust title size */
+        }
+        .condition-content {
+          padding: 32px 16px;
+        }
+        .terms-title {
+          margin-bottom: 32px;
+        }
+        .ordered-list {
+          font-size: 18px;
+          line-height: "120%";
+          padding-left: 16px;
+        }
+      }
       /* Media query for screens below 767px */
       @media (max-width: 767px) {
         .form-side {
-            height: auto;
+          height: auto;
           padding: 24px 16px; /* Adjust padding */
           background-size: auto 240px; /* Maintain aspect ratio with fixed height */
         }
@@ -103,6 +139,17 @@
         }
         .icon-div img {
           width: 20px;
+        }
+        .condition-content {
+          padding: 24px 16px;
+        }
+        .ordered-list {
+          font-size: 16px;
+          line-height: "120%";
+        }
+        .terms-title {
+          text-align: left;
+          margin-bottom: 24px;
         }
       }
     </style>
@@ -166,17 +213,9 @@
           </div>
         </div>
         <div class="col-12 col-sm-12 col-md-4 col-lg-4 condition-content">
-          <h2 class="title" style="text-align: center; margin-bottom: 40px">
-            Terms and conditions
-          </h2>
+          <h2 class="title terms-title" style="">Terms and conditions</h2>
           <div>
-            <ol
-              style="
-                color: #807f83;
-                font-size: 20px;
-                line-height: calc(20px + 16px);
-              "
-            >
+            <ol class="ordered-list">
               <li style="margin-bottom: 16px">
                 This card is for a single transaction; any remaining amount is
                 not exchangeable with cash or other gift cards and will be
