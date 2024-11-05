@@ -20,7 +20,7 @@
         padding: 0;
         overflow-x: hidden; /* Prevent horizontal scrolling */
       }
-      .form-content {
+      .form-side {
         padding: 40px;
         height: 100vh;
         min-height: auto; /* Remove the 100vh height */
@@ -30,6 +30,17 @@
         background-position: bottom right;
         background-repeat: no-repeat;
         background-size: auto 434px; /* Maintain aspect ratio with fixed height */
+      }
+      .form-content {
+        margin-top: 64px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+      .top-part {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
       }
       .title {
         font-size: 32px;
@@ -62,18 +73,29 @@
       }
       /* Media query for screens below 767px */
       @media (max-width: 767px) {
-        .form-content {
+        .form-side {
+            height: auto;
           padding: 24px 16px; /* Adjust padding */
           background-size: auto 240px; /* Maintain aspect ratio with fixed height */
         }
+        .form-content {
+          margin-top: 24px;
+          gap: 24px;
+        }
         .logo {
           width: 80px; /* Reduced logo size */
+        }
+        .top-part {
+          gap: 24px;
         }
         .title {
           font-size: 24px; /* Adjust title size */
         }
         .data-title {
           font-size: 16px;
+        }
+        .data-subtitle {
+          font-size: 14px;
         }
         .icon-div {
           height: 32px;
@@ -88,17 +110,10 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12 col-sm-12 col-md-8 col-lg-8 form-content">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8 form-side">
           <img src="assets/aarong-logo.png" width="100px" class="logo" />
-          <div
-            style="
-              margin-top: 64px;
-              display: flex;
-              flex-direction: column;
-              gap: 40px;
-            "
-          >
-            <div>
+          <div class="form-content">
+            <div class="top-part">
               <h2 class="title">Gift Voucher Validity Check</h2>
               <div class="mb-3" style="max-width: 440px; width: 100%">
                 <label
