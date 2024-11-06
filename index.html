@@ -19,6 +19,9 @@
         padding: 0;
         overflow-x: hidden; /* Prevent horizontal scrolling */
       }
+      .mb-16 {
+        margin-bottom: 16px;
+      }
       input.form-control:focus {
         border-color: #ff5100; /* Set border color to the same shade as the button */
         box-shadow: 0 0 0 0.2rem rgba(255, 81, 0, 0.25); /* Add a subtle shadow for better visibility */
@@ -67,6 +70,11 @@
       }
       .condition-content {
         padding: 80px 40px;
+      }
+      .data-container {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
       }
       .data-title {
         font-size: 20px;
@@ -172,14 +180,10 @@
             <div class="top-part">
               <h2 class="title">Gift Voucher Validity Check</h2>
               <div class="mb-3" style="max-width: 440px; width: 100%">
-                <label
-                  for="basic-url"
-                  class="form-label"
-                  style="margin-bottom: 16px"
-                >
+                <label for="basic-url" class="form-label" class="mb-16">
                   Type your gift card/gift voucher number here
                 </label>
-                <div class="input-group" style="margin-bottom: 16px">
+                <div class="input-group" class="mb-16">
                   <input
                     type="text"
                     class="form-control"
@@ -191,7 +195,7 @@
               </div>
             </div>
             <div style="display: flex; gap: 24px; flex-direction: column">
-              <div style="display: flex; flex-direction: row; gap: 16px">
+              <div class="data-container">
                 <div class="icon-div">
                   <img src="assets/Calendar.png" />
                 </div>
@@ -200,7 +204,7 @@
                   <p class="data-subtitle">31/11/2023</p>
                 </div>
               </div>
-              <div style="display: flex; flex-direction: row; gap: 16px">
+              <div class="data-container">
                 <div class="icon-div">
                   <img src="assets/expiredDate.png" />
                 </div>
@@ -209,7 +213,7 @@
                   <p class="data-subtitle">31/11/2024</p>
                 </div>
               </div>
-              <div style="display: flex; flex-direction: row; gap: 16px">
+              <div class="data-container">
                 <div class="icon-div">
                   <img src="assets/amount.png" />
                 </div>
@@ -222,19 +226,19 @@
           </div>
         </div>
         <div class="col-12 col-sm-12 col-md-4 col-lg-4 condition-content">
-          <h2 class="title terms-title" style="">Terms and conditions</h2>
+          <h2 class="title terms-title">Terms and conditions</h2>
           <div>
             <ol class="ordered-list">
-              <li style="margin-bottom: 16px">
+              <li class="mb-16">
                 This card is for a single transaction; any remaining amount is
                 not exchangeable with cash or other gift cards and will be
                 automatically forfeited.
               </li>
-              <li style="margin-bottom: 16px">
+              <li class="mb-16">
                 Any additional cost exceeding the value of this card will be
                 paid by the redeemer.
               </li>
-              <li style="margin-bottom: 16px">
+              <li class="mb-16">
                 This gift card will not be replaced when lost, damaged or
                 stolen.
               </li>
